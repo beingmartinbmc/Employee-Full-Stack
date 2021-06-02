@@ -1,0 +1,25 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>{{employee.id}}</td>
+            <td>{{employee.firstName}}</td>
+            <td>{{employee.lastName}}</td>
+            <td>{{employee.email}}</td>
+            <td>
+                <div class="d-grid gap-2 d-md-flex" >
+                    <button type="button" class="btn btn-danger" (click) = "onDelete(employee)">Delete</button>
+                    <button type="button" class="btn btn-success" (click) = "onUpdate(employee)">Update</button>
+                 </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
